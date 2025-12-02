@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/baseLayout.astro';
+import Footer from '../components/footer.astro';
+---
+<BaseLayout title="Mentions Légales - Zephine Deforest">
+    <main class="legal-page-content">
+        
+        <a href="/" class="back-link">← <span>Retour à l'accueil</span> </a>
+        
+        <h1>Mentions légales</h1>
+        
+        <section class="legal-section">
+            
+            <h2>Informations légales</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <h2>Propriété intellectuelle</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <h2>Protection des données</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           
+            
+            <h2>Tribunaux compétents</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+            
+        </section>
+    </main>
+    <Footer />
+</BaseLayout>
+
+<style>
+    .legal-page-content {
+        max-width: 900px; 
+        margin: 50px auto; 
+        padding: 0 20px;
+    }
+
+    .back-link span {
+        margin-bottom: 40px;
+        font-size: 1.1em;
+        text-decoration: none;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: -0.31px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-offset: 0%;
+        text-decoration-thickness: 0%;
+        text-decoration-skip-ink: auto;
+    }
+    
+    .back-link:hover {
+        color: var(--color-title-blue); 
+    }
+
+    h1 {
+        color: var(--color-title-blue); 
+        margin-bottom: 30px;
+        margin-top: 20px;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 96px;
+        leading-trim: NONE;
+        line-height: 96px;
+        letter-spacing: -0.31px;
+
+    }
+
+    h2 {
+        color: #0A0A0A;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        font-family: 'Inter';
+        font-weight: 200;
+        font-style: Regular;
+        font-size: 48px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: -0.31px;
+        padding-bottom: 25px;
+
+    }
+    
+    .legal-section p {
+        line-height: 1.6;
+        margin-bottom: 60px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: -0.31px;
+
+    }
+    
+    /* Responsive simple pour la lisibilité sur mobile */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5em; 
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+</style>

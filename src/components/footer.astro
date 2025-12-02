@@ -1,0 +1,39 @@
+
+<footer>
+    <p>&copy; 2025 Zéphine Deforest. Tous droits réservés. 
+        <a href="/mentions-legales">Mentions Légales</a>
+    </p>
+</footer>
+
+<style>
+    /* CSS spécifique au footer, basé sur la maquette */
+    footer {
+        padding: 20px;
+        text-align: center;
+        background-color: var(--color-footer-bg); /* Doit être blanc */
+        
+        /* La bordure fine au-dessus, en utilisant la variable de couleur globale */
+        border-top: 1px solid var(--color-footer-border); 
+        
+        /* Les couleurs du texte */
+        color: var(--color-text-dark); 
+        font-size: 0.9em;
+        width: 100%; /* S'assurer qu'il prend toute la largeur */
+        height: auto;
+        /* Assurez-vous que le footer est toujours en bas si vous avez suivi la mise en page flex pour le body dans global.css */
+        margin-top: auto;
+        position: relative;
+        bottom: 0;
+    }
+
+    footer a {
+        /* Assurez-vous que le lien des mentions légales a le bon style */
+        color: var(--color-text-dark); 
+        text-decoration: underline; 
+        margin-left: 10px; 
+    }
+
+    footer a:hover {
+        opacity: 0.7;
+    }
+</style>
