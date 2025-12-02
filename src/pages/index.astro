@@ -1,11 +1,215 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro'; 
 ---
+<BaseLayout title="Accueil - Zephine Deforest Portfolio">
+    <main class="homepage-content">
+        <section class="main-card">
+            
+            <div class="deco-circle"></div>
+            <div class="deco-square"></div>
 
-<Layout>
-	<Welcome />
-</Layout>
+            <div class="text-content">
+                <h1>Zéphine Deforest</h1> 
+                <h2>Je suis très douée pour coder</h2>
+                <div class="text-container">
+                    <p class="intro-text">
+                        Je décris ici mes expertises succinctement et j'avance que j'exerce avec passion ce métier depuis plusieurs années.
+                    </p>
+                
+                </div>
+                
+                <div class="contact-links">
+                    <a href="mailto:contact@johndoe.com">
+                        <i class="fa-regular fa-envelope"></i>
+                        zephine.deforest@condorcet.com
+                    </a>
+                    <a href="tel:+33123456789">
+                        <i class="fa-solid fa-phone"></i>
+                        +32 123 45 67 89
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-container">
+                <img src="../../public/images/photoProfil.jpg" alt="Photo de profil de Zéphine Deforest" />
+            </div>
+
+        </section>
+    </main>
+    <Footer /> 
+</BaseLayout>
+
+<style>
+    .main-card {
+        background: linear-gradient(135deg, #E7000B 0%, #C10007 100%);
+        box-shadow: 0px 25px 50px -12px #00000040;
+        padding: 50px 80px;
+        width: 1280px;
+        height: 628px;
+        top: 124.5px;
+        left: 39.5px;
+        color: var(--color-text-light); 
+        margin: 0 auto; 
+        border-radius: 20px;
+        position: relative; 
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        overflow: hidden; 
+        z-index: 1;    
+    }
+
+    /* Styles des éléments décoratifs */
+    .deco-circle {
+        position: absolute;
+        width: 112px;
+        height: 112px;
+        top: 40.5px;
+        left: 40.5px;
+        border-radius: 16777200px;
+        opacity: 0.8;
+
+        background: #155DFC;
+        z-index: -1;
+    }
+
+    .deco-square {
+        position: absolute;
+        width: 135.76px;
+        height: 135.76px;
+        background-color: var(--color-square-bg);
+        top: 472.12px;
+        left: 1028.12px;
+        transform: rotate(45deg); 
+        z-index: -1; 
+    }
+
+
+    /* Styles de la Photo  */
+    .profile-container {
+        overflow: hidden;
+        border: 8px solid var(--color-accent-blue); 
+        box-shadow: 0px 25px 50px -12px #00000040 ;
+        flex-shrink: 0; 
+        width: 500px;
+        height: 500px;
+        left: 652px;
+        border-radius: 16777200px;
+        opacity: 1;
+        border-width: 8px;
+        background: #FFFFFF00;
+    }
+
+    .profile-container img {
+        width: 500px;
+        object-fit: cover;
+        position: relative;
+        top: -65px;
+    }
+
+    /* --- Styles du Texte et des Liens --- */
+    .text-content {
+        flex-grow: 1;
+        max-width: 60%; 
+    }
+
+    h1 {
+        font-family: "Inter";
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 70px;
+        line-height: 96px;
+        letter-spacing: 0px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: 0.4px;
+    }
+    .text-container {
+        width: 432px;
+        height: 84px;
+        top: 0.5px;
+        left: 0.5px;
+        angle: 0 deg;
+        opacity: 1;
+    }
+    .intro-text {
+        line-height: 1.5;
+        margin-bottom: 30px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 28px;
+        letter-spacing: -0.44px;
+
+    }
+
+    .contact-links a {
+        display: inline-block;
+        margin-right: 20px;        
+        position: relative;
+        height: 47px;
+        opacity: 1;
+        gap: 24px;
+        padding-top: 16px;
+
+        font-family: 'Inter';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.31px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-offset: 0%;
+        text-decoration-thickness: 0%;
+        text-decoration-skip-ink: auto;
+
+
+    }
+    .contact-links i {
+        margin-right: 5px;
+        font-size: 20px;
+        position: relative;
+        bottom: -2px;
+    }
+    .contact-links a:hover {
+        color: var(--color-title-blue); 
+    }
+    /* Ajoutez des media queries ici pour le Mobile */
+    @media (max-width: 768px) {
+        .main-card {
+            flex-direction: column; /* La photo passe au-dessus du texte */
+            padding: 30px 20px;
+            margin: 20px;
+        }
+
+        .text-content {
+            max-width: 100%;
+            order: 2; /* Le texte vient après la photo */
+            text-align: center;
+        }
+
+        .profile-container {
+            order: 1; /* La photo vient en premier */
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex; /* Met les liens les uns sous les autres */
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+</style>
