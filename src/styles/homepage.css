@@ -105,9 +105,7 @@ h2 {
     margin-bottom: 30px;
     font-family: 'Inter';
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
-    leading-trim: NONE;
     line-height: 28px;
     letter-spacing: -0.44px;
 
@@ -124,13 +122,11 @@ h2 {
 
     font-family: 'Inter';
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.31px;
     text-decoration: underline;
     text-decoration-style: solid;
-    text-decoration-offset: 0%;
     text-decoration-thickness: 0%;
     text-decoration-skip-ink: auto;
 
@@ -213,7 +209,6 @@ h2 {
         top: 32px;
         left: 260px;
         border-radius: 16777200px;
-        angle: 0 deg;
         opacity: 0.8;
     }
     .deco-square {
